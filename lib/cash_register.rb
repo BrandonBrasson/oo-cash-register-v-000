@@ -35,5 +35,10 @@ end
         end
 end
 
+attributsParam = [nil];
+attributs = Array(attributsParam);
+
+# [nil]
+puts attributs.inspect
 
 end
