@@ -19,7 +19,7 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
        items << title
     @last_transaction_amount = @total
     @total
-  end
+  
      end
    end
 
