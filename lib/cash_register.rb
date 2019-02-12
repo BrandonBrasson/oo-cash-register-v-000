@@ -25,7 +25,7 @@ attr_accessor :total, :discount, :price, :items
     end
     @total -= @total * @discount / 100
     return "After the discount, the total comes to $#{@total}."
-  end 
+  end
 
 
     def void_last_transaction
