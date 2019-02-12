@@ -17,7 +17,7 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
     @total += price * quantity
      quantity.times do
        items << title
-     @last_transaction_amount = @total
+    @last_transaction_amount = @total
     @total
   end
      end
