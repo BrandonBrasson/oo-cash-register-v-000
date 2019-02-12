@@ -21,11 +21,10 @@ attr_accessor :total, :discount, :price, :items
 
     def apply_discount()
     if discount == 0
-    return  "After the discount, the total comes to $#{@total}."
+    return   "There is no discount to apply."
   else @discount
   @total = @total * (1 - @discount / 100)
-    return "There is no discount to apply."
-
+    return "After the discount, the total comes to $#{@total}."
       end
     end
 
