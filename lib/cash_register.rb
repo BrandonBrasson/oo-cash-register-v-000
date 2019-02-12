@@ -23,7 +23,7 @@ attr_accessor :total, :discount, :price, :items
     if @discount == 0
       return "There is no discount to apply."
     end
-    @total -= @total * @discount / 100
+  else  @total -= @total * @discount / 100
     return "After the discount, the total comes to $#{@total}."
   end
 
