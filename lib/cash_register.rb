@@ -7,7 +7,6 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
     @total = 0
     @discount = discount
     @items = []
-    @last_transaction_amount = last_transaction_amount
   end
 
   def items
@@ -19,7 +18,6 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
      quantity.times do
        items << title
 end
-     self.last_transaction = amount * quantity
    end
 
 
@@ -31,9 +29,10 @@ end
     return "After the discount, the total comes to $#{@total}."
   end
 
-  def void_last_transaction
-     self.total = self.total - self.last_transaction
-   end
+      def void_last_transaction()
+      @total = total - @last_transaction_amount
+        end
+
 
 
 end
