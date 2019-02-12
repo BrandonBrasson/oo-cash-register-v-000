@@ -14,12 +14,20 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
       @items
     end
 
-  def add_item(title, price, quantity = 1)
-    @total += price * quantity
-     quantity.times do
-       items << title
-end
-   end
+    def add_item(title, amount, quantity=1)
+        self.total += amount * quantity
+        quantity.times do
+          items << title
+        end
+        self.last_transaction = amount * quantity
+      end
+
+#  def add_item(title, price, quantity = 1)
+  #  @total += price * quantity
+     #quantity.times do
+    #   items << title
+#end
+  # end
 
 
    def apply_discount
@@ -30,10 +38,10 @@ end
     return "After the discount, the total comes to $#{@total}."
   end
 
-      def void_last_transaction()
-      total =- last_transaction_amount
-        end
 
+  def void_last_transaction
+     self.total = self.total - self.last_transaction
+   end
 
 
 end
