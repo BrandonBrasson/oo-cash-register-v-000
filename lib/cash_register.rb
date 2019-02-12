@@ -33,7 +33,7 @@ end
   def void_last_transaction
      self.total -= self.last_item[1] * self.last_item[2]
    end
- end
+
 
 
 end
