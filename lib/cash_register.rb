@@ -29,10 +29,10 @@ attr_accessor :total, :discount, :price, :items
     return "After the discount, the total comes to $#{@total}."
   end
 
+      def void_last_transaction()
+          @total -= @last_transaction_amount
+        end
 
-    def void_last_transaction
-     @@all = []
-    end
 
 
 end
