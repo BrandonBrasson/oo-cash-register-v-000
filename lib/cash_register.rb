@@ -30,5 +30,5 @@ attr_accessor :total, :discount, :price, :items
 
 
     def void_last_transaction
-    @total == @price
+    @total = @price
     end
