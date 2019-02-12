@@ -29,10 +29,11 @@ end
     return "After the discount, the total comes to $#{@total}."
   end
 
-      def void_last_transaction()
+       if def void_last_transaction()
       @total = total - @last_transaction_amount
+       return true
         end
-
+end
 
 
 end
