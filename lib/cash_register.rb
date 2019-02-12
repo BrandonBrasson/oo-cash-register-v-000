@@ -14,14 +14,13 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
     end
 
 
-      def add_item(title, amount, quantity=1)
-        self.total += amount * quantity
-        quantity.times do
-          items << title
-        end
-        self.last_transaction = amount * quantity
-      end
-
+    def add_item(title, price, quantity = 1)
+  quantity.times do
+    self.items << title
+  end
+  self.total += price * quantity
+  self.last_item = [title, price, quantity]
+end
    def apply_discount
     if @discount == 0
       return "There is no discount to apply."
@@ -31,10 +30,10 @@ attr_accessor :total, :discount, :price, :items, :last_transaction_amount
   end
 
 
-def void_last_transaction
-self.total = self.total - self.last_transaction_amount
-end
-
+  def void_last_transaction
+     self.total -= self.last_item[1] * self.last_item[2]
+   end
+ end
 
 
 end
