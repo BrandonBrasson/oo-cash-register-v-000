@@ -19,7 +19,7 @@ attr_accessor :total, :discount, :price, :items
    end
 
 
-   def employee_discount
+   def discount
    if @discount
      @total = @total * (1 - @discount / 100)
      "After the discount, the total comes to $#{@total}"
